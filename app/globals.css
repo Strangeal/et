@@ -25,3 +25,20 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.swipper-thumbs .swiper-wrapper {
+  @apply !bg-[#000] grid grid-cols-4 sm:grid-cols-6  md:grid-cols-8 border border-gray-15 !items-center md:gap-3 gap-3 rounded-2xl;
+}
