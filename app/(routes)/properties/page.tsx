@@ -96,7 +96,7 @@ const Properties = (props: Props) => {
 
                         <form className="space-y-5 bg-gray-08 p-5 rounded-xl sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-4 sm:my-8 lg:grid-cols-5">
                             <div className="relative col-span-2 lg:col-span-1">
-                                <select className="bg-black border text-sm bg-[#000] border-gray-15 text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
+                                <select className="bg-black outline outline-gray-15 text-sm bg-[#000] border-r-8 border-[#000] text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
                                     <option defaultValue="Location">
                                         Location
                                     </option>
@@ -110,7 +110,7 @@ const Properties = (props: Props) => {
                                 </span>
                             </div>
                             <div className="relative">
-                                <select className="bg-black border text-sm bg-[#000] border-gray-15 text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
+                                <select className="bg-black outline outline-gray-15 text-sm bg-[#000] border-r-8 border-[#000] text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
                                     <option defaultValue="Property Type">
                                         Property Type
                                     </option>
@@ -124,7 +124,7 @@ const Properties = (props: Props) => {
                                 </span>
                             </div>
                             <div className="relative">
-                                <select className="bg-black border text-sm bg-[#000] border-gray-15 text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
+                                <select className="bg-black outline outline-gray-15 text-sm bg-[#000] border-r-8 border-[#000] text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
                                     <option defaultValue="Pricing Range">
                                         Pricing Range
                                     </option>
@@ -137,7 +137,7 @@ const Properties = (props: Props) => {
                                 </span>
                             </div>
                             <div className="relative">
-                                <select className="bg-black border text-sm bg-[#000] border-gray-15 text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
+                                <select className="bg-black outline outline-gray-15 text-sm bg-[#000] border-r-8 border-[#000] text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
                                     <option defaultValue="Property Size">
                                         Property Size
                                     </option>
@@ -150,7 +150,7 @@ const Properties = (props: Props) => {
                                 </span>
                             </div>
                             <div className="relative">
-                                <select className="bg-black border text-sm bg-[#000] border-gray-15 text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
+                                <select className="bg-black outline outline-gray-15 text-sm bg-[#000] border-r-8 border-[#000] text-gray-60 h-12 rounded-lg pl-8 w-full focus-within:outline-none">
                                     <option defaultValue="Build Year">
                                         Build Year
                                     </option>
