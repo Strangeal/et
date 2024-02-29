@@ -5,7 +5,9 @@ import PaginationBtn from '../common/PaginationBtn'
 import Headline from '../common/Headline'
 import WindowSizeTracker from '@/components/common/WindowSizeTracker'
 
-type Props = {}
+type FaqProps = {
+    style?: any
+}
 
 const faqList = [
     {
@@ -22,7 +24,9 @@ const faqList = [
     },
 ]
 
-const Faq = () => {
+const Faq = ({ style }: FaqProps) => {
+    console.log('style:', style)
+
     const renderContent = (windowSize: any) => {
         if (windowSize.width <= 640) {
             return <FaqCard faq={faqList} count={1} />
@@ -40,6 +44,7 @@ const Faq = () => {
                 secDesc="Find answers to common questions about Estatein's services, property
           listings, and the real estate process. We're here to provide clarity
           and assist you every step of the way."
+                sm_display={style}
             />
 
             <WindowSizeTracker renderContent={renderContent} />
