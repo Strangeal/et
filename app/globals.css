@@ -39,6 +39,14 @@ input[type=number] {
 }
 
 
-.swipper-thumbs .swiper-wrapper {
+swipper-thumbs .swiper-wrapper {
   @apply !bg-[#000] grid grid-cols-4 sm:grid-cols-6  md:grid-cols-8 border border-gray-15 !items-center md:gap-3 gap-3 rounded-2xl;
 }
+
+.swipper-thumbs .swiper-wrapper {
+  @apply !grow;
+}
+/* 
+.swipper-thumbs .swiper-wrapper .swiper-slide img {
+  @apply !
+} */

@@ -40,10 +40,8 @@ const Faq = ({ style }: FaqProps) => {
     return (
         <section className="mx-5 xl:m-12">
             <Headline
-                secTitle="Frequently Asked Questions"
-                secDesc="Find answers to common questions about Estatein's services, property
-          listings, and the real estate process. We're here to provide clarity
-          and assist you every step of the way."
+                secTitle="Hello heading"
+                secDesc="hi"
                 sm_display={style}
             />
 
