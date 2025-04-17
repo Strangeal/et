@@ -23,6 +23,14 @@ const list = {
     contact: ['Contact Form', 'Our Offices'],
 }
 
+type ListType = {
+    home: string[]
+    about: string[]
+    properties: string[]
+    services: string[]
+    contact: string[]
+}
+
 const Footer = () => {
     return (
         <footer>
@@ -66,8 +74,8 @@ const Footer = () => {
                 {/* grid-cols-2 auto-rows-max gap-y-8 md:grid-cols-5 */}
                 <nav className="px-5 mb-12 lg:col-span-5">
                     <div className="grid grid-cols-2 lg:grid-cols-5 lg:grid-rows-1 lg:gap-4">
-                        {Object.keys(list).map(
-                            (category: string, index: number) => (
+                        {(Object.keys(list) as (keyof ListType)[]).map(
+                            (category, index) => (
                                 <>
                                     <ul
                                         key={index}
@@ -77,8 +85,11 @@ const Footer = () => {
                                         <h5 className="text-gray-60 text-lg font-light capitalize mb-6">
                                             {category}
                                         </h5>
-                                        {list[category].map((item: any) => (
-                                            <li className="text-md font-light py-1">
+                                        {list[category].map((item: string) => (
+                                            <li
+                                                className="text-md font-light py-1"
+                                                key={item}
+                                            >
                                                 <Link href="#">{item}</Link>
                                             </li>
                                         ))}
