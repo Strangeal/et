@@ -11,24 +11,24 @@ const WindowSizeTracker = ({
 }: {
     renderContent: (windowSize: WindowSize) => React.JSX.Element
 }) => {
-    const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
+    const [windowSize, setWindowSize] = useState<WindowSize>({
+        width: 0, // Default values for SSR
+        height: 0,
     })
 
-    const handleResize = () => {
-        setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight,
-        })
-    }
-
     useEffect(() => {
-        setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight,
-        })
+        // Access `window` only in the browser
+        const handleResize = () => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            })
+        }
 
+        // Set initial size
+        handleResize()
+
+        // Add event listener
         window.addEventListener('resize', handleResize)
 
         return () => {
