@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import IonHome from '@/public/icons/IonHome.svg'
 import IonValue from '@/public/icons/IonValue.svg'
@@ -6,7 +5,6 @@ import IonBuilding from '@/public/icons/IonBuilding.svg'
 import IonSun from '@/public/icons/IonSun.svg'
 import arrowSide from '@/public/icons/IonArrowUpSide.svg'
 
-type Props = {}
 const valuesList = [
     {
         img: IonHome,
@@ -26,7 +24,7 @@ const valuesList = [
     },
 ]
 
-function HeroValues({}: Props) {
+function HeroValues() {
     return (
         <div className="grid grid-cols-2 gap-2 text-center border border-gray-15 p-3 rounded-lg shadow-light my-10 md:grid-cols-4 md:my-0">
             {valuesList.map((value, index) => (

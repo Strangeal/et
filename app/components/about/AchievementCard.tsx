@@ -1,7 +1,5 @@
 import React from 'react'
 
-type Props = {}
-
 const achievementsList = [
     {
         title: '3+ Years of Excellence',
@@ -17,7 +15,7 @@ const achievementsList = [
     },
 ]
 
-const AchievementCard = (props: Props) => {
+const AchievementCard = () => {
     return (
         <div className="grid gap-5 md:grid-cols-3 mt-8">
             {achievementsList?.map((list, index) => (

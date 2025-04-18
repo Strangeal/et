@@ -8,7 +8,11 @@ type PaginationCountProps = {
     next: string
 }
 
-export const ButtonLeft = ({ btnStylesLeft }: any) => {
+export const ButtonLeft = ({
+    btnStylesLeft,
+}: {
+    btnStylesLeft: string
+}): React.JSX.Element => {
     return (
         <button type="button" className={`md:flex ${btnStylesLeft} md:w-full`}>
             <Image

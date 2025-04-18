@@ -39,8 +39,6 @@ type PricingDetails = {
 const PropertyDetails = () => {
     const params = useParams()
 
-    console.log(params)
-
     const keyFeatures = [
         'Expansive oceanfront terrace for outdoor entertaining',
         'Gourmet kitchen with top-of-the-line appliances',

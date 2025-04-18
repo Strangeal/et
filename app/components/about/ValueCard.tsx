@@ -4,8 +4,6 @@ import IonPurpleStar from '@/public/icons/purple-star.svg'
 import IonExcellence from '@/public/icons/Ex-purple.svg'
 import IonPeople from '@/public/icons/IonPeople.svg'
 
-type Props = {}
-
 const valuesList = [
     {
         icon: IonPurpleStar,
@@ -29,7 +27,7 @@ const valuesList = [
     },
 ]
 
-const ValueCard = (props: Props) => {
+const ValueCard = () => {
     return (
         <>
             <div className="border border-gray-15 rounded-lg shadow-deep p-5 md:grid md:grid-cols-2 md:p-8 md:col-span-2 lg:p-10">

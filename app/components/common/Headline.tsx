@@ -1,10 +1,19 @@
 import Image from 'next/image'
-import React from 'react'
 import stars from '@/public/icons/star-abstract.svg'
 
-type Props = {}
+interface HeadlineProps {
+    secTitle: string
+    secDesc: string
+    sm_display?: string
+    md_display?: string
+}
 
-const Headline = ({ secTitle, secDesc, sm_display, md_display }: any) => {
+const Headline = ({
+    secTitle,
+    secDesc,
+    sm_display,
+    md_display,
+}: HeadlineProps) => {
     return (
         <div className="text-pretty">
             <Image

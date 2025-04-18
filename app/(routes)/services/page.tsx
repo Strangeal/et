@@ -20,11 +20,6 @@ const Services = () => {
                 </div>
             </div>
             <HeroValues />
-            {/* <Headline
-                secTitle="Unlock Property Value"
-                secDesc="Selling your property should be a rewarding experience, and at Estatein, we make sure it is."
-                sm_display="hidden"
-            /> */}
             <ServiceItems />
         </section>
     )

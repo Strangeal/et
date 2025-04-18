@@ -3,9 +3,20 @@ import React from 'react'
 import IonMenu4 from '@/public/icons/Ion4Menu.svg'
 import IonCategory from '@/public/icons/IonElectric.svg'
 
-type Props = {}
+type profileListItems = {
+    year: string
+    title: string
+    domain: string
+    category: string
+    desc: string
+}[]
 
-const ClientProfileCard = ({ profiles, count }: any) => {
+type ClientProfileProps = {
+    profiles: profileListItems
+    count: number
+}
+
+const ClientProfileCard = ({ profiles, count }: ClientProfileProps) => {
     return (
         <div className="grid gap-5 sm:grid-cols-2  pt-8 md:pt-12">
             {profiles?.slice(0, count).map((profile: any, index: number) => (

@@ -5,8 +5,6 @@ import PaginationBtn from '../common/PaginationBtn'
 import Headline from '../common/Headline'
 import WindowSizeTracker from '@/components/common/WindowSizeTracker'
 
-type Props = {}
-
 const testimonialsList = [
     {
         title: 'Exceptional Service!',
@@ -32,7 +30,12 @@ const testimonialsList = [
 ]
 
 const Testimonial = () => {
-    const renderContent = (windowSize: any) => {
+    interface WindowSize {
+        width: number
+        height: number
+    }
+
+    const renderContent = (windowSize: WindowSize): JSX.Element => {
         if (windowSize.width <= 640) {
             return <TestimonialCard testimonials={testimonialsList} count={1} />
         } else if (windowSize.width > 640 && windowSize.width <= 768) {

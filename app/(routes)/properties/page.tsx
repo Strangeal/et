@@ -6,7 +6,6 @@ import prop1 from '@/public/images/pro-sky.png'
 import prop2 from '@/public/images/modern-prop.jpg'
 import prop3 from '@/public/images/luxury-pool-villa.jpg'
 import WindowSizeTracker from '@/app/components/common/WindowSizeTracker'
-import PaginationBtn from '@/app/components/common/PaginationBtn'
 import {
     ButtonLeft,
     ButtonRight,
@@ -14,8 +13,6 @@ import {
 } from '@/app/components/common/Pagination-utils/Buttons'
 import RequestForm from '@/app/components/properties/RequestForm'
 import ExploreBanner from '@/app/components/common/ExploreBanner'
-
-type Props = {}
 
 const propertiesList = [
     {
@@ -47,8 +44,13 @@ const propertiesList = [
     },
 ]
 
-const Properties = (props: Props) => {
-    const renderContent = (windowSize: any) => {
+const Properties = () => {
+    interface WindowSize {
+        width: number
+        height: number
+    }
+
+    const renderContent = (windowSize: WindowSize): JSX.Element => {
         if (windowSize.width <= 640) {
             return <PropertyCard properties={propertiesList} count={1} />
         } else if (windowSize.width > 640 && windowSize.width <= 768) {

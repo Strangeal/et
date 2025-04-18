@@ -1,9 +1,16 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
-type Props = {}
+interface WindowSize {
+    width: number
+    height: number
+}
 
-const WindowSizeTracker = ({ renderContent }: any) => {
+const WindowSizeTracker = ({
+    renderContent,
+}: {
+    renderContent: (windowSize: WindowSize) => React.JSX.Element
+}) => {
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight,

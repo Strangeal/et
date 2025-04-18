@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import IonX from '@/public/icons/IonX.svg'
@@ -7,8 +6,6 @@ import MaxImg from '@/public/images/max.png'
 import SarahImg from '@/public/images/sarah.png'
 import DavidImg from '@/public/images/David.png'
 import MichaelImg from '@/public/images/Michael.png'
-
-type Props = {}
 
 const teamList = [
     {
@@ -33,7 +30,7 @@ const teamList = [
     },
 ]
 
-const TeamCard = (props: Props) => {
+const TeamCard = () => {
     return (
         <div className="grid sm:grid-cols-2 gap-5 lg:grid-cols-4 py-8">
             {teamList?.map((team) => (

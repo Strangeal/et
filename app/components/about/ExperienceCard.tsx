@@ -1,10 +1,19 @@
 import React from 'react'
 
-type Props = {}
+type experienceListItems = {
+    step: string
+    title: string
+    desc: string
+}[]
+
+type ExperienceCardProps = {
+    experiences: experienceListItems
+    count: number
+}
 
 // #703BF7, #703BF700
 // #703BF7, #703BF700
-const ExperienceCard = ({ experiences, count }: any) => {
+const ExperienceCard = ({ experiences, count }: ExperienceCardProps) => {
     return (
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3  pt-8 md:pt-12">
             {experiences

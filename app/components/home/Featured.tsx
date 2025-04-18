@@ -39,7 +39,12 @@ const propertiesList = [
 ]
 
 const Featured = () => {
-    const renderContent = (windowSize: any) => {
+    interface WindowSize {
+        width: number
+        height: number
+    }
+
+    const renderContent = (windowSize: WindowSize): JSX.Element => {
         if (windowSize.width <= 640) {
             return <PropertyCard properties={propertiesList} count={1} />
         } else if (windowSize.width > 640 && windowSize.width <= 768) {

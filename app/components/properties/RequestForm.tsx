@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const RequestForm = (props: Props) => {
+const RequestForm = () => {
     return (
         <form className="border border-gray-15 rounded-lg px-5 py-8 mt-8 mb-12 md:px-8 md:py-12">
             <div className="gap-5 grid items-end sm:grid-cols-2 lg:grid-cols-4 md:gap-y-10">

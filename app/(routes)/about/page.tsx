@@ -68,8 +68,13 @@ const profileList = [
     },
 ]
 
+interface WindowSize {
+    width: number
+    height: number
+}
+
 const About = () => {
-    const renderContent = (windowSize: any) => {
+    const renderContent = (windowSize: WindowSize) => {
         if (windowSize.width <= 640) {
             return <ExperienceCard experiences={experienceList} count={3} />
         } else if (windowSize.width > 640 && windowSize.width <= 768) {
@@ -79,7 +84,7 @@ const About = () => {
         }
     }
 
-    const renderProfiles = (windowSize: any) => {
+    const renderProfiles = (windowSize: WindowSize) => {
         if (windowSize.width <= 640) {
             return <ClientProfileCard profiles={profileList} count={1} />
         } else {

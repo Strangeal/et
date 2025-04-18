@@ -3,9 +3,13 @@ import Image from 'next/image'
 import IonArrowLeft from '@/public/icons/IonArrowLeft-gray.svg'
 import IonArrowRight from '@/public/icons/IonArrowRight-white.svg'
 
-type Props = {}
+type PaginationBtnProps = {
+    prev: string
+    next: string
+    btnContent: string
+}
 
-const PaginationBtn = ({ prev, next, btnContent }: any) => {
+const PaginationBtn = ({ prev, next, btnContent }: PaginationBtnProps) => {
     return (
         <div className="border-t border-gray-15 py-10 mt-10 flex items-center justify-between gap-3 md:pb-10 md:pt-3">
             <button

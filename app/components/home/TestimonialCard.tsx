@@ -3,14 +3,24 @@ import React from 'react'
 import starRating from '@/public/icons/rating-star.svg'
 import anim from '@/public/icons/animoji.svg'
 
-type Props = {}
+interface TestimonialItems {
+    title: string
+    desc: string
+    client_name: string
+    country: string
+    state: string
+}
+type TestimonialTypes = {
+    testimonials: TestimonialItems[]
+    count: number
+}
 
-const TestimonialCard = ({ testimonials, count }: any) => {
+const TestimonialCard = ({ testimonials, count }: TestimonialTypes) => {
     return (
         <div className="grid items-start md:grid-cols-2 lg:grid-cols-3 gap-3">
             {testimonials
                 .slice(0, count)
-                .map((testimonial: any, index: any) => (
+                .map((testimonial: TestimonialItems, index: number) => (
                     <div
                         key={index}
                         className="border border-gray-15 rounded-lg px-6 py-10 mt-8 space-y-5 md:last:col-span-2 md:mb-0 md:last:w-[60%] md:last:mx-auto lg:last:col-span-1 lg:last:w-auto"

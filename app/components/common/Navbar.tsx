@@ -1,15 +1,11 @@
 'use client'
-import React, { useState } from 'react'
 import logo from '@/public/icons/Symbol.svg'
 import IonMenu from '@/public/icons/hamburger-menu.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import Banner from './Banner'
 
-type Props = {}
-
-const Navbar = (props: Props) => {
-    // const [menu, setMenu] = useState(false)
+const Navbar = () => {
     const navList = [
         {
             name: 'Home',

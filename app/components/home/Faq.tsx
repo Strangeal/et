@@ -6,7 +6,7 @@ import Headline from '../common/Headline'
 import WindowSizeTracker from '@/components/common/WindowSizeTracker'
 
 type FaqProps = {
-    style?: any
+    style?: string
 }
 
 const faqList = [
@@ -27,7 +27,12 @@ const faqList = [
 const Faq = ({ style }: FaqProps) => {
     console.log('style:', style)
 
-    const renderContent = (windowSize: any) => {
+    interface WindowSize {
+        width: number
+        height: number
+    }
+
+    const renderContent = (windowSize: WindowSize): JSX.Element => {
         if (windowSize.width <= 640) {
             return <FaqCard faq={faqList} count={1} />
         } else if (windowSize.width > 640 && windowSize.width <= 768) {

@@ -1,7 +1,3 @@
-import React from 'react'
-
-type Props = {}
-
 const ExploreBanner = () => {
     return (
         <section className="bg-[url('/icons/ads-abstract-r.svg'),_url('/icons/ads-abstract-l.svg')] bg-[position:bottom_right,top_-150px_left] md:bg-[position:right,_left] bg-no-repeat px-5 xl:px-24 border border-gray-15 pt-14 pb-5">

@@ -1,11 +1,18 @@
 import React from 'react'
 
-type Props = {}
+type FaqItem = {
+    title: string
+    desc: string
+}
 
-const FaqCard = ({ faq, count }: any) => {
+type FaqTypes = {
+    faq: FaqItem[]
+    count: number
+}
+const FaqCard = ({ faq, count }: FaqTypes) => {
     return (
         <div className="grid items-start md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {faq.slice(0, count).map((faq: any, index: any) => (
+            {faq.slice(0, count).map((faq: FaqItem, index: number) => (
                 <div
                     key={index}
                     className="border border-gray-15 rounded-lg px-6 py-6 mt-8 space-y-3 md:last:col-span-2 md:mb-0 md:last:w-[60%] md:last:mx-auto lg:last:col-span-1 lg:last:w-auto"

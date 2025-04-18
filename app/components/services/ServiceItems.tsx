@@ -11,7 +11,11 @@ import SunIon from '@/public/icons/sun_ion.svg'
 import Headline from '../common/Headline'
 import { ServiceBanner, ServiceCard } from './UnlockCard'
 
-type Props = {}
+type ServiceItem = {
+    title: string
+    desc: string
+    icon?: string | undefined
+}
 
 const unlockMany = {
     values: [
@@ -100,33 +104,35 @@ const unlockMany = {
     ],
 }
 
-const ServiceItems = (props: Props) => {
+const ServiceItems = () => {
     return (
         <div className="my-9 space-y-8">
-            {Object.keys(unlockMany).map((key) => {
-                return unlockMany[key].map((item) => (
-                    <div className=" last:bg-gray-30">
-                        <Headline
-                            secTitle={item.name}
-                            secDesc={item.desc}
-                            sm_display="hidden"
-                        />
+            {(Object.keys(unlockMany) as (keyof typeof unlockMany)[]).map(
+                (key) => {
+                    return unlockMany[key].map((item) => (
+                        <div className=" last:bg-gray-30">
+                            <Headline
+                                secTitle={item.name}
+                                secDesc={item.desc}
+                                sm_display="hidden"
+                            />
 
-                        <div className="grid gap-4 sm:grid-cols-2 mt-5 md:grid-cols-3 ">
-                            {item.items.map((service) => (
-                                <ServiceCard
-                                    title={service.title}
-                                    desc={service.desc}
-                                    icon={service.icon}
-                                />
-                            ))}
-                            <div className="sm:col-span-2 order-first">
-                                <ServiceBanner />
+                            <div className="grid gap-4 sm:grid-cols-2 mt-5 md:grid-cols-3 ">
+                                {item.items.map((service: ServiceItem) => (
+                                    <ServiceCard
+                                        title={service.title}
+                                        desc={service.desc}
+                                        icon={service.icon || ''}
+                                    />
+                                ))}
+                                <div className="sm:col-span-2 order-first">
+                                    <ServiceBanner />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))
-            })}
+                    ))
+                }
+            )}
         </div>
     )
 }
